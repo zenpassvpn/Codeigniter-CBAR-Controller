@@ -24,7 +24,7 @@ class Currency extends CI_Controller{
 		 $data = $xml->xpath('ValType[@Type="Xarici valyutalar"]');
 
 		 foreach ($data[0]->Valute as $currency) {
-		 	echo "1 ".$currency[0]['Code']." ".$currency->Value."<br/>";
+		 	//echo "1 ".$currency[0]['Code']." ".$currency->Value."<br/>";
 		 	if($this->CurrencyModel->check($currency[0]['Code']))
 		 	{
 		 		$update_data = array(
